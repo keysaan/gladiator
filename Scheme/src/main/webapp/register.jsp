@@ -19,7 +19,7 @@
 	Enter your pin-code:<input name="pincode" /><br/>
 	Enter your State:<input name="state" /><br/>
 	Enter your IFSC Code:<input name="ifscNo" /><br/>
-	<!-- Upload your profile pic: <input type="file" name="pic" /><br/> -->
+
 	<button type="submit">Register</button>
 	</form>
 </body>

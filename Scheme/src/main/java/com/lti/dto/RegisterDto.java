@@ -1,9 +1,5 @@
 package com.lti.dto;
 
-import javax.persistence.Column;
-
-import org.springframework.web.multipart.MultipartFile;
-
 public class RegisterDto {
 	
 	private String firstName;

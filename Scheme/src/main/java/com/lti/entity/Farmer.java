@@ -2,6 +2,7 @@ package com.lti.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,12 +15,12 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="FARMER_DETAILS")
+@Table(name="TBL_FARMER_DETAILS")
 public class Farmer {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQUENCE1")
-	@SequenceGenerator(name="SEQUENCE1",sequenceName="farmer_seq", allocationSize=1, )
+	@SequenceGenerator(name="SEQUENCE1",sequenceName="farmer_seq", allocationSize=1)
 	@Column(name="FARMER_ID")
 	private int id;
 	
@@ -47,13 +48,11 @@ public class Farmer {
 	@Column(name="FARMER_PASSWORD")
 	private String password;
 	
-	@OneToOne
-	@JoinColumn(name="ADDRESS_ID")
+	@OneToOne(mappedBy="farmer",cascade=CascadeType.ALL)
 	private Address address;
 //	private List<SellRequest> sellRequests;
 	
-	@OneToOne
-	@JoinColumn(name="BANK_DETAILS")
+	@OneToOne(mappedBy="farmer",cascade=CascadeType.ALL)
 	private BankDetails bankDetails;
 
 	@OneToMany(mappedBy="farmer")

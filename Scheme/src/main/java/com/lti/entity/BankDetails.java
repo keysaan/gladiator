@@ -3,6 +3,7 @@ package com.lti.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
@@ -10,17 +11,17 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="BANK_DETAILS")
+@Table(name="TBL_BANK_DETAILS")
 
 public class BankDetails {
 
 	@Id
-	@GeneratedValue
-	@SequenceGenerator(name="bank_id_seq", initialValue=4011, allocationSize= 1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQUENCE1")
+	@SequenceGenerator(name="SEQUENCE1",sequenceName="bankdetails_seq", allocationSize=1)
 	@Column(name="BANK_ID")
 	private int bankId;
 	
-	@Column(name="IFSC_NO")
+	@Column(name="IFSC")
 	private String ifscNo;
 	
 	@OneToOne

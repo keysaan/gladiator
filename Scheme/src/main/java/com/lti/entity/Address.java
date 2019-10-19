@@ -3,14 +3,20 @@ package com.lti.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="TBL_ADDRESS")
 public class Address {
  
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQUENCE1")
+	@SequenceGenerator(name="SEQUENCE1",sequenceName="address_seq", allocationSize=1)
 	@Column(name= "ADDRESS_ID")
 	private int id;
 	
@@ -26,10 +32,12 @@ public class Address {
 	@Column(name= "PINCODE")
 	private int pincode;
 	
-	@OneToOne(mappedBy="address")
+	@OneToOne
+	@JoinColumn(name="FARMER_ID")
 	private Farmer farmer;
 	
-	@OneToOne(mappedBy="address")
+	@OneToOne
+	@JoinColumn(name="BIDDER_ID")
 	private Bidder bidder;
 
 	public int getId() {
