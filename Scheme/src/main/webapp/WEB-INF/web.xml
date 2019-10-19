@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
+ <display-name>spring-mvc</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- DispatcherServlet by SPring plays the role of
+  		Front Controller in Spring MVC
+  		According to MVC design pattern, there are two types of 
+  		Controllers(Front Controller & Application Controller)
+  		 FrontController will be the one which will handle any 
+  		 incoming request from the client and route it to
+  		 the respective application specific controller for
+  		 further processing -->
+   <servlet>
+      <servlet-name>mvc</servlet-name>
+      <servlet-class>
+         org.springframework.web.servlet.DispatcherServlet
+      </servlet-class>
+      <load-on-startup>1</load-on-startup>
+   </servlet>
+
+   <servlet-mapping>
+      <servlet-name>mvc</servlet-name>
+      <url-pattern>*.lti</url-pattern>
+   </servlet-mapping>
+ 
+</web-app>

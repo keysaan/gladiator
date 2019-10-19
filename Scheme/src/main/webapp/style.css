@@ -1,0 +1,164 @@
+ /* css for insurance dashboard starts */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+  }
+  .container{
+      height: 15%;
+  }
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color:#D5252F;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #ddd;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  li a.active {
+    color:blue;
+    background-color: white;
+  }
+  
+  li:last-child{
+      float: right;
+  }
+  #outer-div{
+      margin-top: 13%; 
+      margin-left: 28%;
+      margin-right: 25%; 
+      width: 40%;
+      border:2px solid #F5F5F5;
+      
+  
+  }
+  .inner-div1:hover{
+      box-shadow: 7px 7px 5px grey;
+  }
+  .inner-div1{
+      text-align: center;
+      padding: 20px;
+      border:1px solid grey;
+      margin:10px;
+  }
+  a{
+      text-decoration: none;
+      color: black;
+  }
+  /* css for insurance application starts */
+#outer-div-application{
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 45%;
+    height: 400px;
+    border:2px solid #F5F5F5;
+    float: left;
+    display: inline-block;
+  
+   
+}
+/* .text-field-insurance{
+    padding: 15px; 
+}*/
+input{
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    border: solid rgba(221,221,221,1) 2px; 
+   border-radius: 2px; 
+}
+
+.button1-class{
+    margin: 5px;
+    color: #fff ;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #D5252F;
+    padding: 20px;
+    border-radius: 50px;
+    display: inline-block;
+    border: none; 
+    }
+
+table, th, td{
+    border: 2px solid #EFF0F1 ;
+    border-collapse: collapse;
+    width:100px;
+}
+th,td{
+    padding: 10px;
+}
+#table-div{
+    margin-top: 5%;
+    width: 45%;
+    float: left;
+    display: inline-block;
+}
+.button2-class{
+    margin: 5px;
+    color: #fff ;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #D5252F;
+    padding: 20px;
+    border-radius: 40px;
+    /* display: inline-block; */
+    border: none; 
+    float: right;
+    }
+h1{
+    color: grey;
+}
+  /* css for claim form starts */
+#claim-form-button{
+    display: block;
+    margin: auto;
+    color: #fff ;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #D5252F;
+    padding: 20px;
+    border-radius: 40px;
+    border: none; 
+    text-align: center; 
+    margin-bottom: 1%;
+}
+.claim-input-field{
+    width:60%;
+    margin-top: 10px;
+    height: 30px;
+    /* border-radius: 4px; */
+}
+.claim-center-div{
+        margin-top:3%; 
+        margin-left: 15%;
+        margin-right: 25%;
+        width: 70%;
+        border: 1px solid rgba(221,221,221,1);
+        border-radius: 4px;
+}
+.insurance-particulars-div{
+  margin-left: 23%;
+}
+.loss-cause-div{
+    margin-left: 23%;
+    margin-bottom: 2%;
+
+} 

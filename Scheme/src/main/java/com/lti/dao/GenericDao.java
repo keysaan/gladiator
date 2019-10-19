@@ -1,0 +1,33 @@
+package com.lti.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.swing.text.TabableView;
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Repository;
+
+@Repository("genericDao")
+public class GenericDao {
+	
+	@PersistenceContext
+	private EntityManager entityManager;
+	
+	@Transactional
+	public void add(Object obj){
+		entityManager.merge(obj);
+	}
+	
+//	public Object fetch(Class clazz , Object pk){
+//		return entityManager.find(clazz, pk);	
+//	}
+//	
+//	public List<E> fetchAll(Class clazz){
+//		String jpql ="";
+//		return entityManager.createQuery(jpql , clazz).getResultList();
+//	}
+//	
+	
+}
