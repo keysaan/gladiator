@@ -6,6 +6,7 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -17,8 +18,8 @@ import javax.persistence.Table;
 public class SellRequest {
 
 	@Id
-	@GeneratedValue
-	@SequenceGenerator(name="sell_id_seq", initialValue=5009, allocationSize= 1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQUENCE1")
+	@SequenceGenerator(name="SEQUENCE1",sequenceName="sellrequest_seq", allocationSize=1)
 	@Column(name="SELL_ID")
 	private int sellId;
 	

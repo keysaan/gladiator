@@ -3,6 +3,7 @@ package com.lti.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
@@ -14,8 +15,8 @@ import javax.persistence.Table;
 public class Bidder{
 
 	@Id
-	@GeneratedValue	
-	@SequenceGenerator(name="bidder_id_seq", initialValue=2005, allocationSize= 1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQUENCE1")
+	@SequenceGenerator(name="SEQUENCE1",sequenceName="bidder_seq", allocationSize=1)
 	@Column(name="BIDDER_ID")
 	private int id;
 	

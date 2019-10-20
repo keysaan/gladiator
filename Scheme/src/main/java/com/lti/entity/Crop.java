@@ -3,6 +3,7 @@ package com.lti.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -15,8 +16,8 @@ import javax.persistence.Table;
 public class Crop {
 	
 	@Id
-	@GeneratedValue
-	@SequenceGenerator(name="crop_id_seq", initialValue=16, allocationSize= 1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQUENCE1")
+	@SequenceGenerator(name="SEQUENCE1",sequenceName="crop_seq", allocationSize=1)
 	@Column(name="CROP_ID")
 	private int cropId;
 	
