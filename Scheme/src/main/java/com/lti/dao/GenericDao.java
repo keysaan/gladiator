@@ -19,10 +19,10 @@ public class GenericDao {
 		entityManager.merge(obj);
 	}
 	
-//	public Object fetch(Class clazz , Object pk){
-//		return entityManager.find(clazz, pk);	
-//	}
-//	
+	public Object fetch(Class clazz , Object pk){
+		return entityManager.find(clazz, pk);	
+	}
+	
 //	public List<E> fetchAll(Class clazz){
 //		String jpql ="";
 //		return entityManager.createQuery(jpql , clazz).getResultList();
