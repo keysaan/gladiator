@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
@@ -44,6 +45,7 @@ public class Insurance {
 	@Column(name="STATUS")
 	private String status;
 	
+   @ManyToOne 
    @JoinColumn(name="CROP_ID")
    private Crop crop;
    
