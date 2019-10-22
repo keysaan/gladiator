@@ -44,7 +44,7 @@ public class Crop {
 	@JoinColumn(name="CROP_TYPE_ID")
 	private CropType cropType;
 	
-	
+//	
 
 	public int getCropId() {
 		return cropId;

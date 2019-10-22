@@ -44,10 +44,10 @@ public class Bidder{
 	@Column(name="BIDDER_PANCARD")
 	private String panCard;
 	
-	@OneToOne
+/*	@OneToOne
 	@JoinColumn(name="ADDRESS_ID")
 	private Address address;
-	
+	*/
 
 	
 	public int getId() {
@@ -104,14 +104,14 @@ public class Bidder{
 	public void setPanCard(String panCard) {
 		this.panCard = panCard;
 	}
-	public Address getAddress() {
+/*	public Address getAddress() {
 		return address;
 	}
 	public void setAddress(Address address) {
 		this.address = address;
 	}
 	
-	
+	*/
 	
 	
 }

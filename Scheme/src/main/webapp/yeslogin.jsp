@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1>${user.firstName}</h1>
 <h1>You are logged in successfully</h1>
 </body>
 </html>

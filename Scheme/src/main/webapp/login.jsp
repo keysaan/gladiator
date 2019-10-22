@@ -10,7 +10,9 @@
 <form action="login.lti" method="get">
 Enter email:<input type="text" name="emailId">
 Enter password:<input type="text" name="password">
-Enter user:<input type="text" name="user">
+Select user:<input type="radio" name="user" value="Farmer">Farmer<br>
+<input type="radio" name="user" value="Bidder">Bidder<br>
+<input type="radio" name="user" value="Admin">Admin
 
 <button type="submit">Login</button>
 </form>

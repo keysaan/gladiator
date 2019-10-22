@@ -15,7 +15,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 
-
+//
 @Entity
 @Table(name="TBL_INSURANCE")
 public class Insurance {

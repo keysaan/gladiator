@@ -13,16 +13,16 @@ public class LoginService {
 	@Autowired
 	private LoginDao loginDao;
 	
-	public boolean login(LoginDto data) {
-		System.out.println(data.getUser());
-		boolean status=false;
-		try {
-			status = loginDao.login(data);
+	public Object login(LoginDto data) {
+	Object o = null;
+	try {
+		o = loginDao.login(data);
 		
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return status;	
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return o;
+	
 	}
 }

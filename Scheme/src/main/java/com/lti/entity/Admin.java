@@ -19,7 +19,7 @@ public class Admin {
 	private int adminId;
 	
 	@Column(name="ADMIN_USERNAME")
-	private String userName;
+	private String firstName;
 	
 	@Column(name="ADMIN_PASSWORD")
 	private String password;
@@ -32,12 +32,14 @@ public class Admin {
 		this.adminId = adminId;
 	}
 
-	public String getUserName() {
-		return userName;
+	
+
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
 	public String getPassword() {

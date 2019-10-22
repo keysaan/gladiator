@@ -31,7 +31,7 @@ public class Farmer {
 	private String lastName;
 	
 	@Column(name="FARMER_CONTACTNO")
-	private int contactNo;
+	private long contactNo;
 	
 	@Column(name="FARMER_EMAILID")
 	private String emailId;
@@ -48,15 +48,7 @@ public class Farmer {
 	@Column(name="FARMER_PASSWORD")
 	private String password;
 	
-	@OneToOne(mappedBy="farmer",cascade=CascadeType.ALL)
-	private Address address;
-//	private List<SellRequest> sellRequests;
 	
-	@OneToOne(mappedBy="farmer",cascade=CascadeType.ALL)
-	private BankDetails bankDetails;
-
-	@OneToMany(mappedBy="farmer")
-	private List<Crop> crop;
 	
 	
 	public int getId() {
@@ -77,7 +69,7 @@ public class Farmer {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public int getContactNo() {
+	public long getContactNo() {
 		return contactNo;
 	}
 	public void setContactNo(int contactNo) {
@@ -113,29 +105,7 @@ public class Farmer {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Address getAddress() {
-		return address;
-	}
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-//	public List<SellRequest> getSellRequests() {
-//		return sellRequests;
-//	}
-//	public void setSellRequests(List<SellRequest> sellRequests) {
-//		this.sellRequests = sellRequests;
-//	}
-	public BankDetails getBankDetails() {
-		return bankDetails;
-	}
-	public void setBankDetails(BankDetails bankDetails) {
-		this.bankDetails = bankDetails;
-	}
-	public List<Crop> getCrop() {
-		return crop;
-	}
-	public void setCrop(List<Crop> crop) {
-		this.crop = crop;
-	}
+
+
 
 }
