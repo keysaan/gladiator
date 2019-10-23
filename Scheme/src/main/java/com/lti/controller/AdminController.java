@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.lti.entity.Claim;
 import com.lti.service.AdminService;
-
+//
 @Controller
 public class AdminController {
 
