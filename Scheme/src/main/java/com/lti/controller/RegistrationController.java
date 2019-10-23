@@ -12,7 +12,7 @@ import com.lti.entity.Address;
 import com.lti.entity.BankDetails;
 import com.lti.entity.Farmer;
 import com.lti.service.RegisterService;
-
+//
 @Controller
 public class RegistrationController {
 		
