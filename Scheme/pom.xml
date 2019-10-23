@@ -98,6 +98,13 @@
     <artifactId>java-uuid-generator</artifactId>
     <version>3.1.4</version>
 	</dependency>
+	
+	<!-- jstl library for using for loop in jsp -->
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>jstl</artifactId>
+		<version>1.2</version>
+	</dependency>
 
 </dependencies>
   

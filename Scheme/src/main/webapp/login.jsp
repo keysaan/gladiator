@@ -13,7 +13,6 @@ Enter password:<input type="text" name="password">
 Select user:<input type="radio" name="user" value="Farmer">Farmer<br>
 <input type="radio" name="user" value="Bidder">Bidder<br>
 <input type="radio" name="user" value="Admin">Admin
-
 <button type="submit">Login</button>
 </form>
 </body>

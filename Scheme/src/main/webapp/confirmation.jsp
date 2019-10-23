@@ -8,5 +8,8 @@
 </head>
 <body>
 <h2>Registration Completed Successfully</h2>
+<form action="sellRequest.lti" method="get">
+<input type="submit" value="click">
+</form>
 </body>
 </html>
