@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Farmer Dashboard</title>
+<link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<!-- <script>
+	$(function() {
+		$('#hiMsg').append("Hi "+sessionStorage.name+",");
+		if (sessionStorage.getItem("fid") == null) {
+			alert("You need to login first");
+			window.location.href = "login.html";
+		} else {
+			$("#logout").click(function(evt) {
+				alert("Hope to see you soon");
+				sessionStorage.removeItem("fid");
+				window.location.href = "login.html";
+			})
+		}
+	});
+</script> -->
+
+<body>
+
+	<!-- <header>
+		<h2>SCHEME FOR FARMERS</h2>
+	</header> -->
+
+	<section>
+		<div class="topnav">
+			<a href="Schemeforfarmers.html">Home</a> 
+			 <a href="contact.html">Contact</a> 
+			 <a href="about.html">About</a>
+			 <input type="text">
+			  <a	href="login.html" id="logout">Logout</a>
+
+		</div>
+
+		<article>
+			<h1  id="hiMsg"></h1>  
+			<div id="result"></div>
+
+			<a href="FarmerSellRequestForm.html">Place crop sell request</a><br> <br>
+			 <a	href="ViewMarketplace.html">View Marketplace</a><br> <br> 
+			 <a	href="FarmerRequestStatus.html">Crop sell status</a><br>
+			<br> <a href="FarmerSoldHistory.html">View sold crop history</a> 
+
+
+		</article>
+	</section>
+
+
+</body>
+</html>

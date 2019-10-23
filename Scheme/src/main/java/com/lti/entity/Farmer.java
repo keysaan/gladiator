@@ -48,9 +48,11 @@ public class Farmer {
 	@Column(name="FARMER_PASSWORD")
 	private String password;
 	
+	@OneToOne(mappedBy="farmer",cascade=CascadeType.ALL)
+	private Address address;
 	
-	
-	
+	@OneToOne(mappedBy="farmer",cascade=CascadeType.ALL)
+	private BankDetails bankDetails;
 	public int getId() {
 		return id;
 	}
@@ -104,6 +106,18 @@ public class Farmer {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	public BankDetails getBankDetails() {
+		return bankDetails;
+	}
+	public void setBankDetails(BankDetails bankDetails) {
+		this.bankDetails = bankDetails;
 	}
 
 

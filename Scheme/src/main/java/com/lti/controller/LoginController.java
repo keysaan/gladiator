@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.lti.dto.LoginDto;
-import com.lti.entity.Farmer;
 import com.lti.service.LoginService;
 
 @Controller
@@ -19,21 +18,30 @@ public class LoginController{
 	@Autowired
 	private LoginService loginService;
 	@RequestMapping(path="/login.lti" , method = RequestMethod.GET)
-	public String login(LoginDto data, Map model) throws ClassNotFoundException, InstantiationException, IllegalAccessException{
-		
-		//Farmer f = new Farmer();
+	public String login(LoginDto data, Map model) throws ClassNotFoundException {
+				
 		data.getEmailId();
 		data.getPassword();
-		/*Class c=Class.forName(data.getUser());
-		Object o=c.newInstance();*/
-		System.out.println(data.getUser());
-		
-		Object obj=(Object)loginService.login(data);
-		if(obj!=null){
-			model.put("user", obj);
-			return "yeslogin.jsp";
+		String role=data.getUser();
+		Object o=loginService.login(data);
+		//System.out.println(o.toString());
+		//System.out.println(o.getClass());
+		//System.out.println(Farmer.class);
+		//Class c=o.getClass();
+		//System.out.println(c.getName());
+		//System.out.println(data.getUser());
+		model.put("user",o.toString());
+		if(role.equals("Farmer")){
+			return "farmerdashboard.jsp";
 		}
 		else
-			return "login.jsp";
+			if(role.equals("Bidder")){
+				return "yeslogin.jsp";
+			}
+			else
+				if(role.equals("Admin")){
+					return "admindasboard.jsp";
+				}
+		return "login.jsp";
 	}
 	}

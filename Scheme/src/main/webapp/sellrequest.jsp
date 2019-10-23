@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h4>${user }</h4>
 <form method="post" action="sellrequest.lti" enctype="multipart/form-data">
  <select name="cropId">
  	<option value="2">Wheat</option>
@@ -31,6 +31,7 @@
  enter soil ph: <input name="soilPhCertificate"><br>
  enter quantity: <input name="quantity"><br>
  <button type="submit">place request</button>
+ <a href="farmerdashboard.jsp">back </a>
 </form>
 </body>
 </html>

@@ -1,0 +1,35 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-size: 16px;
+    line-height: 19px;
+    color:#111;
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+
+.container{
+    background-color: #006699;
+    color: #fff;
+    height: 400px;
+	width: 600px;
+	margin: 0px auto;
+	padding: 5px
+}
+
+.left{
+    background-color:aquamarine;
+	color: #fff;
+	height: 400px;
+	width: 600px;
+	margin: 0px auto;
+	padding: 5px;
+}
+.right{
+    background-color: #e71b1b;
+	color: #000;
+	height: 400px;
+	width: 48%;
+	float: right;
+}

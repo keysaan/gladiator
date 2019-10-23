@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.lti.dao.GenericDao;
 import com.lti.dto.SellRequestDto;
@@ -18,6 +19,7 @@ import com.lti.entity.SellRequest;
 import com.lti.service.SellRequestService;
 
 @Controller
+@SessionAttributes("user")
 public class SellRequestController {
 	
 	@Autowired
