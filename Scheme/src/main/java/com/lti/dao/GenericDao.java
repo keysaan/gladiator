@@ -19,7 +19,7 @@ public class GenericDao {
 		entityManager.merge(obj);
 	}
 	
-	public Object fetch(Class clazz , Object pk){
+	public Object fetchById(Class clazz , Object pk){
 		return entityManager.find(clazz, pk);	
 	}
 	

@@ -9,7 +9,7 @@ import com.lti.entity.SellRequest;
 import com.lti.interfaces.SellRequestInterface;
 
 @Repository("sellrequestDao")
-public class SellRequestDao  implements SellRequestInterface{
+public class SellRequestDao {
 	
 	@PersistenceContext
 	EntityManager entityManager;
@@ -18,11 +18,9 @@ public class SellRequestDao  implements SellRequestInterface{
 	public void addSellRequest(SellRequest sellRequest) {
 		entityManager.persist(sellRequest);
 		
+		
 	}
 
-	public void removeSellRequest(SellRequest sellRequest) {
-		entityManager.remove(sellRequest);	
-	}
 }	
 
 

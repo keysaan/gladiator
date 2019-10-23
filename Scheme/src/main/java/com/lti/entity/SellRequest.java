@@ -26,8 +26,11 @@ public class SellRequest {
 	@Column(name="BASE_VALUE")
 	private double baseValue;
 	
+	@Column(name="QUANTITY")
+	private double quantity;
+	
 	@Column(name="BID_DEADLINE")
-	private Date deadLine;
+	private Date bidDeadLine;
 	
 	@Column(name="SOIL_PH_CERTIFICATE")
 	private String soilPhCertificate;
@@ -56,12 +59,12 @@ public class SellRequest {
 		this.baseValue = baseValue;
 	}
 
-	public Date getDeadLine() {
-		return deadLine;
+	public Date getBidDeadLine() {
+		return bidDeadLine;
 	}
 
-	public void setDeadLine(Date deadLine) {
-		this.deadLine = deadLine;
+	public void setBidDeadLine(Date deadLine) {
+		this.bidDeadLine = deadLine;
 	}
 
 	public String getSoilPhCertificate() {
@@ -86,6 +89,14 @@ public class SellRequest {
 
 	public void setCrop(Crop crop) {
 		this.crop = crop;
+	}
+
+	public double getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(double quantity) {
+		this.quantity = quantity;
 	}
 	
 	
